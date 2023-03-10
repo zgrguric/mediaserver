@@ -1,0 +1,8 @@
+/public/storage
+/vendor
+/composer.lock
+/composer.phar
+/logs/*.log
+.env
+.phpunit.result.cache
+phpunit.xml

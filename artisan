@@ -1,0 +1,20 @@
+<?php
+use Symfony\Component\Console\Application;
+
+require __DIR__ . '/bootstrap/bootstrap.php';
+$consoleDir = ROOT.'app'.DS.'Console'.DS;
+
+$consoleFiles = scandir($consoleDir);
+$console = new Application("Smokva Framework Console", "1.0");
+foreach($consoleFiles as $f)
+{
+  if (ends_with($f,'.php'))
+  {
+    $ns = 'Console\\'.substr($f,0,-4);
+    $cmd = new $ns();
+    unset($ns);
+    $console->add($cmd);
+    unset($cmd);
+  }
+}
+$console->run();

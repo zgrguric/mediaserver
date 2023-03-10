@@ -1,0 +1,41 @@
+{
+    "require": {
+        "php": "^7.1.3",
+        "slim/slim": "^3.0",
+        "slim/http-cache": "^0.4.0",
+        "zeuxisoo/slim-whoops": "0.6.*",
+        "monolog/monolog": "^1.23",
+        "mongodb/mongodb": "^1.4",
+        "vlucas/phpdotenv": "^2.5",
+        "illuminate/database": "^5.6",
+        "nesbot/carbon": "^2.0.0",
+        "illuminate/pagination": "^5.7",
+        "jenssegers/mongodb": "^3.4",
+        "intervention/imagecache": "^2.3",
+        "league/flysystem-memory": "^1.0",
+        "mariano/disque-php": "^2.0",
+        "firebase/php-jwt": "^5.0",
+        "intervention/image": "^2.5",
+        "php-ffmpeg/php-ffmpeg": "^0.14.0",
+        "illuminate/queue": "^5.8",
+        "symfony/process": "^4.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ncx\\": "app/Ncx",
+            "Console\\": "app/Console"
+        },
+        "files": [
+            "app/Helpers/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8",
+        "symfony/var-dumper": "^4.4"
+    }
+}
